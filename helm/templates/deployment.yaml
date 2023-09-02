@@ -1,0 +1,14 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Values.image.name }}
+spec:
+  replicas: {{ .Values.replicas }}
+  template:
+    spec:
+      containers:
+      - name: {{ .Values.image.name }}
+        image: "{{ .Values.image.name }}:{{ .Values.image.tag }}"
+        env:
+        - name: AUTHOR
+          value: {{ .Values.author }}

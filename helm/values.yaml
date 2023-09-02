@@ -1,0 +1,7 @@
+image:
+  name: "small-web-app"
+  tag: "1.0"
+
+replicas: 3
+
+author: "Unknown"
